@@ -26,16 +26,24 @@ safe-outputs:
     draft: true
 ---
 
-# Update GitHub Info
+# Update Mona's GitHub Info website
 
-Keep the GitHub Info website current with useful, concise updates for developers.
+Read `notes/mona-notes.md` before making changes.
 
-## Instructions
+Use these sources:
 
-1. Read `notes/mona-notes.md` using the GitHub repository API tools. Do not use terminal, CLI, or sandboxed shell commands to read repository guidance or reference files.
-2. Use web-fetch to read `https://github.blog/latest/`.
-3. Use web-fetch to read `https://github.blog/changelog/`.
-4. Use web-fetch to read `https://awesome-copilot.github.com/workflows/`.
-5. Use the GitHub Blog, GitHub Changelog, and Awesome Copilot workflows page as sources for relevant updates. Keep summaries short and practical, and mention the source whenever an update comes from one of those sources.
-6. Use the edit tool to update `site/content/github-info.md` with the selected updates. Preserve the existing file's structure and make only focused content changes.
-7. Use the `create-pull-request` safe output to open a pull request containing the changes for Mona to review. Do not write directly to the default branch.
+- `notes/mona-notes.md`
+- GitHub Blog: https://github.blog/latest/
+- GitHub Changelog: https://github.blog/changelog/
+- Awesome Copilot: https://awesome-copilot.github.com/
+
+Use web-fetch to read https://awesome-copilot.github.com/.
+
+Update `site/content/github-info.md` with concise,
+practical updates for readers and include source context when content comes
+from the GitHub Blog or GitHub Changelog.
+
+Open a pull request for Mona to review.
+Use a pull request title that mentions Mona or GitHub Info.
+Do not write directly to `main`;
+rely on `safe-outputs` with `create-pull-request`.

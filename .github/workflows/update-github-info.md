@@ -4,6 +4,8 @@ on:
   schedule: daily
   workflow_dispatch:
 
+model: claude-sonnet-4-20250514
+
 permissions:
   contents: read
   pull-requests: read
